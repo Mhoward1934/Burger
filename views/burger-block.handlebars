@@ -1,0 +1,9 @@
+<li>
+	{{name}}
+
+	<button class="change-waiting" data-id="{{id}}" data-newwaiting="{{waiting}}">
+		{{#if waiting}}Waiting!{{else}}Devoured!{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
