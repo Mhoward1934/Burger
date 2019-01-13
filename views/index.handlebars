@@ -16,8 +16,6 @@
     </div>
     <div class="col-md-4">
 
-      <img src="Burger/public/assets/img/burger.png">
-
       <h2>Add a Burger</h2>
       <form class="create-form">
 
@@ -25,7 +23,7 @@
           <label for="burger">Burger Name:</label>
         </div>
 
-        <form action="/" method="POST">
+        <form action="burger/create" method="POST">
           <textarea type="text" name="burger_name"></textarea><br>
           <input type="radio" name="devoured" value="1"> Devoured!<br>
           <input type="radio" name="waiting" value="0"> Waiting<br>
