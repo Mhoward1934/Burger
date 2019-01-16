@@ -5,9 +5,12 @@
       <h2>Burgers waiting!</h2>
 
       <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
+        {{#each hbsObject}}
+        {{#if this.devoured}}
+        <div class="col-xs-9 text-center">
+          <pre>{{this.id}}. {{this.burger_name}}</pre>
+        </div>
+        {{!-- {{> hbsObject.burger devoured=false}} --}}
         {{/if}}
         {{/each}}
       </ul>
@@ -34,9 +37,9 @@
       <h2>Burgers that have been devoured!</h2>
 
       <ul>
-        {{#each burgers}}
+        {{#each hbsObject.burger}}
         {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
+        {{> hbsObject.burger devoured=true}}
         {{/unless}}
         {{/each}}
       </ul>
